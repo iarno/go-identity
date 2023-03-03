@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	id := identity.New("511521198305075558")
+	id := identity.New("111111111111111111")
 	err := id.Parse()
 	// 解析错误
 	if err != nil {
