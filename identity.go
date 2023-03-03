@@ -145,6 +145,86 @@ func (id *Identity) GetProvince()  interface{} {
 	return v
 }
 
+// 获取省份名称
+func (id *Identity) GetProvinceName() interface{} {
+	v := id.dataMap[Province]
+	provinceCode, _ := strconv.Atoi(v.(string))
+
+	var provinceName string
+	switch provinceCode {
+	case 11:
+		provinceName = "北京市"
+	case 12:
+		provinceName = "天津市"
+	case 13:
+		provinceName = "河北省"
+	case 14:
+		provinceName = "山西省"
+	case 15:
+		provinceName = "内蒙古自治区"
+	case 21:
+		provinceName = "辽宁省"
+	case 22:
+		provinceName = "吉林省"
+	case 23:
+		provinceName = "黑龙江省"
+	case 31:
+		provinceName = "上海市"
+	case 32:
+		provinceName = "江苏省"
+	case 33:
+		provinceName = "浙江省"
+	case 34:
+		provinceName = "安徽省"
+	case 35:
+		provinceName = "福建省"
+	case 36:
+		provinceName = "江西省"
+	case 37:
+		provinceName = "山东省"
+	case 41:
+		provinceName = "河北省"
+	case 42:
+		provinceName = "湖北省"
+	case 43:
+		provinceName = "湖南省"
+	case 44:
+		provinceName = "广东省"
+	case 45:
+		provinceName = "广西壮族自治区"
+	case 46:
+		provinceName = "海南省"
+	case 50:
+		provinceName = "重庆市"
+	case 51:
+		provinceName = "四川省"
+	case 52:
+		provinceName = "贵州省"
+	case 53:
+		provinceName = "云南省"
+	case 54:
+		provinceName = "西藏自治区"
+	case 61:
+		provinceName = "陕西省"
+	case 62:
+		provinceName = "甘肃省"
+	case 63:
+		provinceName = "青海省"
+	case 64:
+		provinceName = "宁夏回族自治区"
+	case 65:
+		provinceName = "新疆维吾尔自治区"
+	case 71:
+		provinceName = "台湾省"
+	case 81:
+		provinceName = "香港特别行政区"
+	case 82:
+		provinceName = "澳门特别行政区"
+	}
+
+	return provinceName
+}
+
 // setCity 设置城市
 func (id *Identity) setCity() error {
 	id.dataMap[City] = id.data[2:4]
