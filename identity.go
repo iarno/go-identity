@@ -183,7 +183,7 @@ func (id *Identity) GetProvinceName() interface{} {
 	case 37:
 		provinceName = "山东省"
 	case 41:
-		provinceName = "河北省"
+		provinceName = "河南省"
 	case 42:
 		provinceName = "湖北省"
 	case 43:
