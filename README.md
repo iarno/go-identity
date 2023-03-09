@@ -21,6 +21,8 @@ func main() {
 	}
 	// 获取省份代码
 	id.GetProvince()
+	// 获取省份名称
+	id.GetProvinceName()
 	// 获取城市代码
 	id.GetCity()
 	// 获取地区代码
